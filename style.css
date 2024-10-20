@@ -1,0 +1,114 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Josefin Sans", sans-serif;
+}
+:root{
+    --color-primary:hsl(0, 36%, 96%);
+    --text-color-secondary:hsl(0, 36%, 70%);
+    --color2:hsl(0, 93%, 68%);
+    --color3:hsl(0, 6%, 24%);
+}
+body{
+    min-height: 100vh;
+}
+.main-container{
+    display: flex;
+    /* background-color: var(--color-primary); */
+}
+.container-1{
+    width: 60%;
+    /* display: flex; */
+    background-image: url('./images/bg-pattern-desktop.svg');
+    /* align-items: center; */
+}
+.container-2{
+    width: 40%;
+}
+.container-1>div{
+    padding: 20px 25% 0px 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.logo{
+    width: 150px;
+    padding-bottom: 100px;
+    display: block;
+    padding-left: 25%;
+    padding-top: 100px;
+}
+.text-heading{
+    font-size: 60px;
+    width: 40%;
+    letter-spacing: 10px;
+}
+.text-heading>span{
+    color:var(--text-color-secondary) ;
+    font-weight: 300;
+}
+.parah{
+    color: var(--text-color-secondary);
+    width: 80%;
+    line-height: 30px;
+}
+
+form>div{
+    position: relative;
+    /* display: inline-block; */
+    display: flex;
+    align-items: stretch;
+    width: 85%px;
+    
+    
+}
+
+input{
+    padding: 17px 40px;
+    width: 80%;
+    border-radius: 50px;
+    border: 1px solid ;
+    border-color: hsl(0, 36%, 70%);
+    /* border-color:hsl(0, 36%, 70%) ; */
+}
+input::placeholder{
+    color:hsl(0, 36%, 70%) ;
+    font-weight: 45;
+    font-size: 15px;
+}
+button{
+    border: none;
+    background-image: linear-gradient(to right,rgb(248, 191, 191), rgb(238, 140, 140));
+    width: 100px;
+    border-radius: 50px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+}
+.validity{
+    color: red;
+    font-size: 13px;
+    margin: 10px;
+}
+form .hide{
+    display:none;
+}
+.error{
+    position: absolute;
+    top: 28%;
+    width:20px;
+    left: 280px;
+}
+
+@media(max-width:375px){
+    .main-container{
+        flex-direction: column;
+    }
+    .container-2{
+        order: -1;
+    }
+    .log{
+        order: -2;
+    }
+}
